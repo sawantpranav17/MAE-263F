@@ -1,0 +1,61 @@
+# README for Homework 3:
+
+## Overview
+This repository contains the implementation of **Homework 3** titled **HW3**, 
+The project explores how various hyperparameters such as training epochs, learning rate, and the number of hidden layers affect the performance of the model. 
+
+## Contents
+The repository includes the following:
+1. **MATLAB Code**:
+    - `load_train_and_test_data.m`: Loads and preprocesses the training and testing data.
+    - `initialize_parameters.m`: Initializes weights and biases for the network.
+    - `forward_propagation.m`: Implements forward propagation through the network.
+    - `backward_propagation.m`: Implements backward propagation for updating weights.
+    - `update_parameters.m`: Updates weights and biases using gradient descent.
+    - `compute_cost.m`: Calculates the cross-entropy loss.
+    - `predict.m`: Predicts labels for the test set.
+    - `accuracy.m`: Calculates accuracy from predictions.
+    - `tanh2.m`: Applies the hyperbolic tangent activation function.
+    - `softmax.m`: Computes softmax probabilities for classification.
+    - `visualize_history.m`: Plots training loss and testing accuracy over epochs.
+    - `project_906146252.m`: Main script for running the model with different hyperparameter settings.
+    - `predict_single_image.m`: Visualizes predictions for a single image.
+
+2. **Report**:
+    - `HW3.pdf`: A detailed report discussing the problem statement, methodology, results, and the influence of hyperparameters. It includes plots and discussions on testing accuracy and training loss trends.
+
+3. **Plots**:
+    - Visualizations of training loss vs. epochs and testing accuracy vs. epochs, generated for various hyperparameter combinations.
+
+## Problem Statement
+The task involves training a feedforward neural network for classifying images of handwritten digits from the MNIST dataset. The network architecture, hyperparameters, and preprocessing techniques are optimized to achieve high accuracy while ensuring generalization to unseen data.
+
+### Hyperparameter Experiments
+- **Training Epochs**: Tested with values of 50, 150, and 300.
+- **Learning Rates**: Evaluated with 0.1, 0.01, and 0.001.
+- **Hidden Layers**: Experimented with 2, 3, and 5 layers.
+
+## Running the Code
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Open MATLAB and set the repository as the working directory.
+3. Run the main script `project_906146252.m` to execute the model training and evaluation:
+   ```matlab
+   run('project_906146252.m')
+   ```
+
+## Key Results
+- Optimal performance was achieved with:
+  - **Learning rate**: 0.01
+  - **Hidden layers**: 2
+  - **Epochs**: 150
+- Overfitting was observed with more hidden layers or too many epochs.
+- Instability occurred with a high learning rate of 0.1, while slow convergence was noted with a learning rate of 0.001.
+
+## Report
+The report titled **HW3** provides detailed analysis, figures, and discussions on the influence of hyperparameters on model training and performance.
+
+## Citation
+Please note that all the code and data preparation steps are based on the instructions and templates provided in the class resources on BruinLearn.
